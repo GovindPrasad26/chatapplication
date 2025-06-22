@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+  
+     box-sizing: border-box;
+ }
+.home{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 10% 90%;
+}
+
+.home .bottomrow{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }

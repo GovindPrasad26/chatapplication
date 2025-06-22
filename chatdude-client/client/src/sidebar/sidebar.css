@@ -1,0 +1,7 @@
+
+.sidebar{
+    /* background-color:skyblue; */
+    background-color: white;
+   display: grid;
+   grid-template-rows: 10% 90%;
+}
