@@ -1,4 +1,4 @@
-.header{
+/* .header{
 
     background-color:black;
     padding: 10px;
@@ -25,4 +25,103 @@
 }
  .options i{
     font-size: 40px;
+} */
+
+.header {
+  background-color: black;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid white;
+  flex-wrap: wrap; /* Allows content to wrap on small screens */
+}
+
+.brand {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  margin-left: 20px;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.options img {
+  border-radius: 50%;
+  margin-right: 20px;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.options h2 {
+  color: white;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+.options i {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* 🔽 Tablets (≤ 900px) */
+@media (max-width: 900px) {
+  .brand {
+    font-size: 30px;
+    margin-left: 10px;
+  }
+
+  .options img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  .options h2 {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+
+  .options i {
+    font-size: 24px;
+  }
+}
+
+/* 🔽 Phones (≤ 600px) */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    padding: 10px 5px;
+    text-align: center;
+  }
+
+  .brand {
+    font-size: 26px;
+    margin: 5px 0;
+  }
+
+  .options {
+    justify-content: center;
+    gap: 10px;
+    margin-top: 8px;
+  }
+
+  .options img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .options h2 {
+    font-size: 16px;
+  }
+
+  .options i {
+    font-size: 22px;
+  }
 }
