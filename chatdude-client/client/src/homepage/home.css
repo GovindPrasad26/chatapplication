@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
   
      box-sizing: border-box;
@@ -18,4 +18,40 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+  } */
+
+  * {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 10% 90%;
+}
+
+.home .bottomrow {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  height: 100%;
+}
+
+/* ✅ Media Queries for Phones & Small Devices */
+@media (max-width: 768px) {
+  .home {
+    grid-template-rows: 10% 90%;
   }
+
+  .home .bottomrow {
+    grid-template-columns: 1fr;  /* Stack side-by-side columns vertically */
+    grid-template-rows: 40% 60%; /* Optional: Adjust height ratio if needed */
+  }
+}
