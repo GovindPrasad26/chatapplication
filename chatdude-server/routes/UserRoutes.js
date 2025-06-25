@@ -65,8 +65,7 @@ route.get("/getAllUsersChats",verifytoken,async(req,res)=>{
    console.log(req.userdata._id,'exected')
    var data= await chats.find( {_id:{ $ne: new ObjectId(req.userdata._id) }}).toArray();
    console.log(data,'exected')
-
-   res.send({
+ res.send({
     ok:true,
     result:data
    })
