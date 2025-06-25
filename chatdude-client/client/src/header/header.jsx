@@ -18,7 +18,7 @@ function Header() {
         
         <div className="header">
             <div className="brand">
-                <i className="bi bi-chat-left-dots-fill">&nbsp;CHAT DUDE</i>
+                <i className="bi bi-chat-left-dots-fill"><span>chatdude</span></i>
             </div>
             <div className="options">
        
