@@ -1,6 +1,6 @@
 const {MongoClient}=require('mongodb')
 
-const mongoclient = new MongoClient('mongodb://localhost:27017')
+const mongoclient = new MongoClient(process.env.MONGO_URL)
 
 
  async function ConnectionData(collectionName){

@@ -99,6 +99,7 @@
 // // server.listen(PORT, () => {
 // //   console.log("Server running on port", PORT);
 // // });
+require("dotenv").config(); // Add this line first
 
 const express = require("express");
 const http = require("http");
