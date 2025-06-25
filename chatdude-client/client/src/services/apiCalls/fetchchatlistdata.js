@@ -4,7 +4,7 @@ import ChatCreation from "../../actioncreators/chatcreation";
 
 
 function fetchChatList(){
- const userdata = axios.get("http://localhost:5665/chat/getcreatechats",{
+ const userdata = axios.get("https://cha-rsyf.onrender.com/chat/getcreatechats",{
         headers:{
             Authorization:`Bearer ${localStorage.getItem("token-key")}`
         }

@@ -35,7 +35,7 @@ function ChatArea() {
     }
 
     // Connect to socket server
-    socket = io("http://localhost:5665");
+    socket = io("https://cha-rsyf.onrender.com");
 
     // Join chat room
     socket.emit("join_chat", chatRoomId);
@@ -52,7 +52,7 @@ function ChatArea() {
       try {
         console.log("Fetching messages for chatRoomId:", chatRoomId);
         const res = await axios.get(
-          `http://localhost:5665/chat/getmessages?receiverId=${receiverId}`,
+          `https://cha-rsyf.onrender.com/chat/getmessages?receiverId=${receiverId}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token-key")}`,
@@ -93,7 +93,7 @@ function ChatArea() {
     };
 console.log(messageData,'mmmmmmmmmmmmmmmmmmmmmmmmmmmmmm')
     try {
-      await axios.post("http://localhost:5665/chat/sendmessage", messageData, {
+      await axios.post("https://cha-rsyf.onrender.com/chat/sendmessage", messageData, {
         headers: {
           Authorization:`Bearer ${localStorage.getItem("token-key")}`,
         },

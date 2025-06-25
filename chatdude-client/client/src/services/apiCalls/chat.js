@@ -2,7 +2,7 @@ import axios from "axios";
 
  export function createChat(data){
 
-  return axios.post("http://localhost:5665/chat/create-chat",data,{
+  return axios.post("https://cha-rsyf.onrender.com/chat/create-chat",data,{
         headers:{
             Authorization:`Bearer ${localStorage.getItem("token-key")}`
         }

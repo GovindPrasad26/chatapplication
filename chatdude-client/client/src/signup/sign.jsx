@@ -273,7 +273,7 @@ const [validationErrors,setValidationErrors]=useState({})
 
 
     axios
-      .post("https://chatapp-eox3.onrender.com/users/Login", user)
+      .post("https://cha-rsyf.onrender.com/users/signup", user)
       .then((res) => {
         if (res.data.ok) {
      

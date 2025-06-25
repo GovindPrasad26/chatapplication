@@ -2,7 +2,7 @@ import axios from "axios";
 import store from "../../reduxstore/store";
 import userActionCreator from "../../actioncreators/usercreation";
 function fetchData(){
- const userdata = axios.get("http://localhost:5665/users/getAllUsersChats",{
+ const userdata = axios.get("https://cha-rsyf.onrender.com/users/getAllUsersChats",{
         headers:{
             Authorization:`Bearer ${localStorage.getItem("token-key")}`
         }

@@ -21,7 +21,7 @@ import axios from 'axios';
 
 export const fetchLastMessages = () => async (dispatch) => {
   try {
-    const res = await axios.get("http://localhost:5665/chat/lastmessages", {
+    const res = await axios.get("https://cha-rsyf.onrender.com/chat/lastmessages", {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token-key")}`,
       },

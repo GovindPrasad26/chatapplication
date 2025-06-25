@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const getLoggedUser= async()=>{
   try{
-    const data = await axios.get('http://localhost:5665/users/username',{
+    const data = await axios.get('https://cha-rsyf.onrender.com/users/username',{
         headers:{
             Authorization:`Bearer ${localStorage.getItem("token-key")}`
         }
