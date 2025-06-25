@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken')
 
-const secret_key ='abcdefghkijnkvetnornf'
+// const secret_key ='abcdefghkijnkvetnornf'
+const secret_key = process.env.JWT_SECRET || 'abcdefghkijnkvetnornf';
 const verify =(req,res,next)=>{
     if(req.headers["authorization"] === undefined){
         console.log(headers)
