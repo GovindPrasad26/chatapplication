@@ -15,7 +15,8 @@ const Login = () => {
 
        
         event.preventDefault();
-        axios.post('http://localhost:5665/users/Login', state)
+        axios.post('https://cha-rsyf.onrender.com/users/login', state)
+        
             .then((res) => {
                 if (res.data.ok) {
                     alert('User valid');
@@ -129,81 +130,3 @@ const Login = () => {
 };
 
 export default Login;
-
-// import React, { useState } from "react";
-
-// const SendMessageForm = () => {
-//   const [formData, setFormData] = useState({
-//     name: "",
-//     email: "",
-//     message: "",
-//   });
-//   const [status, setStatus] = useState("");
-
-//   const handleChange = (e) => {
-//     setFormData((prev) => ({
-//       ...prev,
-//       [e.target.name]: e.target.value,
-//     }));
-//   };
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     setStatus("Sending...");
-
-//     try {
-//       const res = await fetch("http://localhost:3000/webhook", {
-//         method: "POST",
-//         headers: { "Content-Type": "application/json" },
-//         body: JSON.stringify(formData),
-//       });
-
-//       const data = await res.json();
-//       setStatus(data.message);
-//       if (data.success) {
-//         setFormData({ name: "", email: "", message: "" });
-//       }
-//     } catch (error) {
-//       console.error("Error:", error);
-//       setStatus("Something went wrong.");
-//     }
-//   };
-
-//   return (
-//     <div style={{ maxWidth: "400px", margin: "auto" }}>
-//       <h2>Contact Sales</h2>
-//       <form onSubmit={handleSubmit}>
-//         <input
-//           name="name"
-//           placeholder="Your Name"
-//           value={formData.name}
-//           onChange={handleChange}
-//           required
-//           style={{ width: "100%", marginBottom: 10 }}
-//         />
-//         <input
-//           name="email"
-//           type="email"
-//           placeholder="Your Email"
-//           value={formData.email}
-//           onChange={handleChange}
-//           required
-//           style={{ width: "100%", marginBottom: 10 }}
-//         />
-//         <textarea
-//           name="message"
-//           placeholder="Message to Sales Team"
-//           value={formData.message}
-//           onChange={handleChange}
-//           required
-//           rows={5}
-//           style={{ width: "100%", marginBottom: 10 }}
-//         />
-//         <button type="submit">Send to Sales Team</button>
-//       </form>
-//       {status && <p>{status}</p>}
-//     </div>
-//   );
-// };
-
-// export default SendMessageForm;
