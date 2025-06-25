@@ -28,7 +28,7 @@ if(store==null){
 })
 
 
-route.post('/Login',async(req,res)=>{
+route.post('/login',async(req,res)=>{
     const users =req.body
   const collection = await ConnectionData('chats')
       console.log("Login route hit");
