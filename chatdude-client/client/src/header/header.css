@@ -1,15 +1,56 @@
-.header {
+/* .header {
   background-color: black;
-  padding: 6px 12px;
+  padding: 1px 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid white;
-  height: 60px; /* reduce height */
+  height: 70px; 
 }
 
 .brand {
-  font-size: 24px;  /* reduce font size */
+  font-size: 20px;  
+  font-weight: bold;
+  color: white;
+  margin-left: 10px;
+  font-style: italic;
+}
+ 
+.options {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.options img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.options h2 {
+  font-size: 18px; 
+  margin-right: 12px;
+}
+
+.options i {
+  font-size: 24px; 
+  cursor: pointer;
+}
+  */
+  .header {
+  background-color: black;
+  padding: 1px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid white;
+  height: 70px; /* default height */
+}
+
+.brand {
+  font-size: 24px;
   font-weight: bold;
   color: white;
   margin-left: 10px;
@@ -29,11 +70,62 @@
 }
 
 .options h2 {
-  font-size: 18px; /* smaller name text */
+  font-size: 18px;
   margin-right: 12px;
 }
 
 .options i {
-  font-size: 24px; /* smaller logout icon */
+  font-size: 24px;
   cursor: pointer;
+}
+
+/* Tablets (768px and below) */
+@media screen and (max-width: 768px) {
+  .header {
+    height: 60px;
+    padding: 1px 10px;
+  }
+
+  .brand {
+    font-size: 20px;
+  }
+
+  .options img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .options h2 {
+    font-size: 16px;
+  }
+
+  .options i {
+    font-size: 22px;
+  }
+}
+
+/* Phones (480px and below) */
+@media screen and (max-width: 480px) {
+  .header {
+    height: 55px;
+    padding: 1px 8px;
+  }
+
+  .brand {
+    font-size: 18px;
+  }
+
+  .options img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .options h2 {
+    font-size: 14px;
+    margin-right: 8px;
+  }
+
+  .options i {
+    font-size: 20px;
+  }
 }
